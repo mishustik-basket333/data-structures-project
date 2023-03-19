@@ -38,3 +38,16 @@ class Stack:
             return None
         self.top = node.next_node
         return node.data
+
+    def __str__(self):
+        """Возвращает название класса"""
+        return f"{self.__class__.__name__}"
+#
+#
+# if __name__ == '__main__':
+#     stack1 = Stack()
+#     stack1.push("444")
+#     print(str(stack1))
+#     stack1.push("555")
+#     print(str(stack1))
+#     print(stack1)

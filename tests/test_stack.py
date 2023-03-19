@@ -1,5 +1,4 @@
 """Здесь надо написать тесты с использованием unittest для модуля stack."""
-
 import pytest
 from src.stack import Node, Stack
 
@@ -47,3 +46,8 @@ def test_stack_pop(stack_1):
     data = stack_1.pop()
     assert data == 400
     assert stack_1.top.data == 300
+
+
+def test_str_stack(stack_1):
+    """Тест для проверки __str__. Он должен возвращать строковое название класса Stack"""
+    assert str(stack_1) == "Stack"
