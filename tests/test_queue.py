@@ -13,7 +13,7 @@ def node_1():
     return Node("111", "222")
 
 
-def test_init_queue(queue_1):
+def test_queue_init(queue_1):
     """Проверка экземпляра 'queue' класса 'Queue' при инициализации"""
     assert queue_1.head is None
     assert queue_1.tail is None
