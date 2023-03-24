@@ -47,3 +47,14 @@ def test_str_queue(queue_1):
 def test_init_node(node_1):
     assert node_1.data == "111"
     assert node_1.next_node == "222"
+
+
+def test_dequeue_queue(queue_1):
+    """Функция проверяет метод dequeue в классе Queue. """
+    queue_1.enqueue("111")
+    queue_1.enqueue("222")
+    queue_1.enqueue("333")
+    assert queue_1.dequeue() == '111'
+    assert queue_1.dequeue() == '222'
+    assert queue_1.dequeue() == '333'
+    assert queue_1.dequeue() is None

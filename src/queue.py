@@ -39,7 +39,12 @@ class Queue:
 
         :return: данные удаленного элемента
         """
-        pass
+        object_data = self.head
+        if not object_data:
+            return None
+        else:
+            self.head = object_data.next_node
+            return object_data.data
 
     def __str__(self):
         """Магический метод для строкового представления объекта"""
@@ -51,14 +56,17 @@ class Queue:
             result.append(head.data)
             head = head.next_node
         return "\n".join(result)
-#
-#
+
+
 # if __name__ == '__main__':
 #     queue = Queue()
 #     queue.enqueue('data1')
 #     queue.enqueue('data2')
 #     queue.enqueue('data3')
-#
-#     print(queue.head.data)
-#     print(queue.head.next_node.data)
-#     print(queue.tail.data)
+#     queue.enqueue('data4')
+#     print(queue.dequeue())
+#     print(queue.dequeue())
+#     print(queue.dequeue())
+#     print(queue.dequeue())
+#     print(queue.dequeue())
+#     print(queue.dequeue())
