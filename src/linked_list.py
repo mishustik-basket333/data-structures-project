@@ -60,10 +60,10 @@ class LinkedList:
         return ll_string
 
 
-ll = LinkedList()
-#
-# # # Добавляем данные
-ll.insert_beginning({'id': 1})
+# ll = LinkedList()
+# #
+# # # # Добавляем данные
+# ll.insert_beginning({'id': 1})
 # # ll.insert_at_end({'id': 2})
 # # ll.insert_at_end({'id': 3})
 # # ll.insert_beginning({'id': 0})
@@ -81,7 +81,7 @@ ll.insert_beginning({'id': 1})
 # ll.insert_at_end({'id': 6})
 #
 # # # Печатаем данные
-print(ll)
-print(str(ll))
+# print(ll)
+# print(str(ll))
 # print("{'id': 0} -> {'id': 1} -> {'id': 2} -> {'id': 3} -> None")
 # assert str(ll) == "{'id': 0} -> {'id': 1} -> {'id': 2} -> {'id': 3} -> None"
