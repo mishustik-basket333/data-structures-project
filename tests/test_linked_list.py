@@ -51,3 +51,22 @@ def test_str_linkedlist(ll_1):
     ll_1.insert_beginning({'id': 3})
     ll_1.insert_beginning({'id': 2})
     assert str(ll_1) == "{'id': 2} -> {'id': 3} -> None"
+
+
+def test_data_verifiction(ll_1):
+    assert ll_1.insert_beginning([1, 2, 3, 4, 5]) is None
+    assert ll_1.insert_beginning({'name': 1, 'username': 'lazzy508509'}) is None
+
+    assert ll_1.insert_at_end([1, 2, 3, 4, 5]) is None
+    assert ll_1.insert_at_end({'name': 1, 'username': 'lazzy508509'}) is None
+
+def test_get_data_by_id(ll_1):
+    assert ll_1.get_data_by_id(3) == None
+
+    ll_1.insert_beginning({'id': 1, 'username': 'lazzy508509'})
+    ll_1.insert_at_end({'id': 2, 'username': 'mik.roz'})
+    ll_1.insert_at_end({'id': 3, 'username': 'mosh_s'})
+    ll_1.insert_beginning({'id': 0, 'username': 'serebro'})
+
+    assert ll_1.get_data_by_id(0) == {'id': 0, 'username': 'serebro'}
+    assert ll_1.get_data_by_id(3) == {'id': 3, 'username': 'mosh_s'}
