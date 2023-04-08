@@ -28,24 +28,24 @@ class LinkedList:
 
     def insert_beginning(self, data: dict) -> None:
         """Принимает данные (словарь) и добавляет узел с этими данными в начало связанного списка"""
-        if data_verification(data):
-            node = Node(data, self.head)
-            if not self.head and not self.tail:
-                self.head = node
-                self.tail = node
-            else:
-                self.head = node
+        # if data_verification(data):
+        node = Node(data, self.head)
+        if not self.head and not self.tail:
+            self.head = node
+            self.tail = node
+        else:
+            self.head = node
 
     def insert_at_end(self, data: dict) -> None:
         """Принимает данные (словарь) и добавляет узел с этими данными в конец связанного списка"""
-        if data_verification(data):
-            node = Node(data)
-            if not self.head and not self.tail:
-                self.head = node
-                self.tail = node
-            else:
-                self.tail.next_node = node
-                self.tail = node
+        # if data_verification(data):
+        node = Node(data)
+        if not self.head and not self.tail:
+            self.head = node
+            self.tail = node
+        else:
+            self.tail.next_node = node
+            self.tail = node
 
     def __str__(self) -> str:
         """Вывод данных односвязного списка в строковом представлении"""
@@ -88,5 +88,8 @@ class LinkedList:
             return None
 
         for data in list_data:
-            if data["id"] == id_name:
-                return data
+            try:
+                if data["id"] == id_name:
+                    return data
+            except TypeError:
+                print('Данные не являются словарем или в словаре нет id')
